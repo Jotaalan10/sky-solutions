@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sky Solutions | Desarrollo Web, Apps y Soporte IT</title>
+  <meta name="description" content="Creamos páginas web, catálogos digitales, sistemas de reservas, apps Android y soporte técnico para emprendedores y pequeños negocios." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#inicio">
+      <span class="brand-icon">☁️</span>
+      <span>Sky Solutions</span>
+    </a>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#precios">Precios</a>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#cotizador">Cotizador</a>
+      <a href="#contacto" class="nav-button">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <p class="badge">Tecnología para emprendedores y pequeños negocios</p>
+        <h1>Convertimos ideas en herramientas digitales reales.</h1>
+        <p class="hero-text">
+          Creamos páginas web, catálogos con pedidos por WhatsApp, sistemas de reservas,
+          aplicaciones Android y soporte técnico para que tu negocio se vea profesional y venda mejor.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://wa.me/529991234567?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20mi%20negocio" target="_blank">Solicitar cotización</a>
+          <a class="btn secondary" href="#servicios">Ver servicios</a>
+        </div>
+        <div class="stats">
+          <div><strong>0</strong><span>mensualidades obligatorias</span></div>
+          <div><strong>48h</strong><span>para prototipos rápidos</span></div>
+          <div><strong>100%</strong><span>enfocado a ventas</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="browser-bar"><span></span><span></span><span></span></div>
+        <h3>Mini tienda demo</h3>
+        <div class="demo-product">
+          <span>Brownie clásico</span>
+          <strong>$35</strong>
+        </div>
+        <div class="demo-product">
+          <span>Gomitas enchiladas</span>
+          <strong>$50</strong>
+        </div>
+        <div class="demo-product">
+          <span>Pedido automático</span>
+          <strong>WhatsApp</strong>
+        </div>
+        <button onclick="demoMessage()">Generar pedido</button>
+        <p id="demo-output">Tu pedido aparecerá aquí.</p>
+      </div>
+    </section>
+
+    <section id="servicios" class="section">
+      <div class="section-heading">
+        <p class="badge">Servicios</p>
+        <h2>Lo que podemos crear para ti</h2>
+        <p>No vendemos solo páginas bonitas. Creamos herramientas que ayudan a ordenar pedidos, conseguir clientes y ahorrar tiempo.</p>
+      </div>
+      <div class="grid services-grid">
+        <article class="card">
+          <span class="icon">🌐</span>
+          <h3>Sitios web</h3>
+          <p>Landing pages, portafolios, menús QR y páginas para emprendedores.</p>
+        </article>
+        <article class="card">
+          <span class="icon">🛒</span>
+          <h3>Catálogos con WhatsApp</h3>
+          <p>El cliente selecciona productos y se genera un mensaje automático con su pedido.</p>
+        </article>
+        <article class="card">
+          <span class="icon">📅</span>
+          <h3>Sistemas de reservas</h3>
+          <p>Agenda citas para uñas, barbería, maquillaje, asesorías o servicios.</p>
+        </article>
+        <article class="card">
+          <span class="icon">📱</span>
+          <h3>Apps Android</h3>
+          <p>Aplicaciones en Flutter para reportes, inventarios, clientes o formularios.</p>
+        </article>
+        <article class="card">
+          <span class="icon">⚙️</span>
+          <h3>Automatización</h3>
+          <p>Formularios conectados a Google Sheets, cotizadores y flujos de pedidos.</p>
+        </article>
+        <article class="card">
+          <span class="icon">💻</span>
+          <h3>Soporte IT</h3>
+          <p>Optimización de PC, instalación de programas, limpieza de malware y configuración.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="precios" class="section alt">
+      <div class="section-heading">
+        <p class="badge">Paquetes iniciales</p>
+        <h2>Precios pensados para estudiantes y microemprendedores</h2>
+      </div>
+      <div class="grid pricing-grid">
+        <article class="price-card">
+          <h3>Básico</h3>
+          <p class="price">Desde $500</p>
+          <ul>
+            <li>1 página web</li>
+            <li>Botón de WhatsApp</li>
+            <li>Redes sociales</li>
+            <li>QR para compartir</li>
+          </ul>
+          <a href="#contacto" class="btn secondary">Me interesa</a>
+        </article>
+        <article class="price-card featured">
+          <p class="popular">Más vendido</p>
+          <h3>Emprendedor</h3>
+          <p class="price">Desde $900</p>
+          <ul>
+            <li>Catálogo de productos</li>
+            <li>Pedido automático por WhatsApp</li>
+            <li>Cálculo de total</li>
+            <li>Diseño personalizado</li>
+          </ul>
+          <a href="#contacto" class="btn primary">Quiero este</a>
+        </article>
+        <article class="price-card">
+          <h3>Pro</h3>
+          <p class="price">Desde $1,500</p>
+          <ul>
+            <li>Sistema de reservas</li>
+            <li>Formulario avanzado</li>
+            <li>Google Sheets</li>
+            <li>Soporte inicial</li>
+          </ul>
+          <a href="#contacto" class="btn secondary">Cotizar</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="portafolio" class="section">
+      <div class="section-heading">
+        <p class="badge">Portafolio</p>
+        <h2>Proyectos y demos</h2>
+      </div>
+      <div class="grid portfolio-grid">
+        <article class="portfolio-card"><h3>SkyFinance</h3><p>App móvil para finanzas personales.</p></article>
+        <article class="portfolio-card"><h3>SkyGuardian</h3><p>Herramienta de análisis de red local.</p></article>
+        <article class="portfolio-card"><h3>Alerta Vecinal</h3><p>App para reportes comunitarios.</p></article>
+        <article class="portfolio-card"><h3>Catálogo demo</h3><p>Mini tienda con pedidos por WhatsApp.</p></article>
+      </div>
+    </section>
+
+    <section id="cotizador" class="section alt">
+      <div class="section-heading">
+        <p class="badge">Cotizador</p>
+        <h2>Calcula un precio estimado</h2>
+        <p>Marca lo que necesitas y te damos una idea rápida del costo.</p>
+      </div>
+      <div class="quote-box">
+        <label><input type="checkbox" value="500"> Página web básica</label>
+        <label><input type="checkbox" value="400"> Catálogo de productos</label>
+        <label><input type="checkbox" value="300"> Pedido por WhatsApp</label>
+        <label><input type="checkbox" value="700"> Sistema de reservas</label>
+        <label><input type="checkbox" value="500"> Google Sheets / automatización</label>
+        <div class="total">Estimado: <strong id="total">$0 MXN</strong></div>
+        <a id="quoteWhatsapp" class="btn primary" target="_blank" href="https://wa.me/529991234567">Enviar cotización</a>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contact-section">
+      <div>
+        <p class="badge">Contacto</p>
+        <h2>¿Listo para digitalizar tu negocio?</h2>
+        <p>Escríbenos y te ayudamos a elegir la mejor opción según tu presupuesto.</p>
+      </div>
+      <a class="btn primary" href="https://wa.me/529984954434?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Sky%20Solutions" target="_blank">Contactar por WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Sky Solutions. Desarrollo web, apps y soporte IT.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
