@@ -1,204 +1,342 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="es-MX" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sky Solutions | Web, automatización, soporte y ciberseguridad</title>
-  <meta name="description" content="Desarrollamos sitios web, catálogos, reservas, automatizaciones, soporte IT y servicios básicos de ciberseguridad para emprendedores y pequeños negocios." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Sky Solutions | Tecnología para emprendedores</title>
+  <meta name="description" content="Sky Solutions crea páginas web, catálogos digitales, sistemas de reservas, aplicaciones Android, soporte IT y soluciones de ciberseguridad para emprendedores y pequeños negocios." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page-noise"></div>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio de Sky Solutions">
+        <span class="brand-mark" aria-hidden="true">SS</span>
+        <span>Sky Solutions</span>
+      </a>
 
-  <header class="navbar">
-    <a class="brand" href="#inicio" aria-label="Sky Solutions inicio">
-      <span class="brand-mark">S</span>
-      <span>Sky Solutions</span>
-    </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#emprendedores">Emprendedores</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#cotizador">Cotizador</a>
+        <a href="#portafolio">Portafolio</a>
+      </nav>
 
-    <nav class="nav-links">
-      <a href="#servicios">Servicios</a>
-      <a href="#demo">Demo</a>
-      <a href="#ciberseguridad">Ciberseguridad</a>
-      <a href="#precios">Precios</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar modo claro u oscuro">
-      <span class="toggle-dot"></span>
-      <span id="themeText">Oscuro</span>
-    </button>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar entre modo claro y oscuro" aria-pressed="false">
+        <span class="switch-track" aria-hidden="true">
+          <span class="switch-thumb"></span>
+        </span>
+        <span id="themeLabel">Claro</span>
+      </button>
+    </div>
   </header>
 
   <main>
-    <section id="inicio" class="hero">
+    <section class="hero section-shell" id="inicio">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Webs reales para gente que vende, agenda o da servicios</p>
-        <h1>Tu negocio no necesita otra imagen de Canva. Necesita una herramienta que trabaje por ti.</h1>
-        <p class="hero-text">Creamos páginas web, catálogos con pedidos por WhatsApp, reservas, automatizaciones, soporte técnico y soluciones básicas de ciberseguridad para estudiantes, emprendedores y pequeños negocios.</p>
+        <p class="eyebrow">Servicios digitales a medida</p>
+        <h1>SKY SOLUTIONS</h1>
+        <p class="hero-lead">Tecnología para emprendedores y pequeños negocios.</p>
+        <p class="hero-subtitle">Creamos herramientas digitales que ayudan a vender más, organizar pedidos y mejorar la presencia digital.</p>
 
-        <div class="hero-actions">
-          <a class="btn primary" href="#demo">Ver demo interactiva</a>
-          <a class="btn secondary" href="https://wa.me/529991234567?text=Hola%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20digital" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
-        </div>
-
-        <div class="trust-strip" aria-label="Beneficios">
-          <span>Sin mensualidad obligatoria</span>
-          <span>QR para compartir</span>
-          <span>Entrega rápida</span>
+        <div class="hero-actions" aria-label="Acciones principales">
+          <a class="button button-primary" href="https://wa.me/529991234567?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20con%20Sky%20Solutions" target="_blank" rel="noopener">Solicitar cotización por WhatsApp</a>
+          <a class="button button-secondary" href="#servicios">Ver servicios</a>
         </div>
       </div>
 
-      <aside class="live-card reveal" aria-label="Demo de pedido">
-        <div class="card-top">
-          <span class="status-dot"></span>
-          <span>Demo en vivo</span>
+      <figure class="hero-visual reveal" aria-label="Vista previa de una herramienta digital para pedidos">
+        <div class="visual-topbar">
+          <span></span>
+          <span></span>
+          <span></span>
+          <small>pedido.skysolutions.mx</small>
         </div>
-        <h2>Dulces Luna</h2>
-        <p>Prueba cómo un cliente puede armar un pedido desde una página.</p>
-
-        <div class="product-row">
-          <div><b>Gomitas enchiladas</b><small>$45 MXN</small></div>
-          <button data-name="Gomitas enchiladas" data-price="45">Agregar</button>
+        <div class="visual-content">
+          <div>
+            <p class="visual-label">Pedido de hoy</p>
+            <h2>Brownies Vero</h2>
+          </div>
+          <div class="visual-metric">
+            <span>Total</span>
+            <strong>$420 MXN</strong>
+          </div>
+          <div class="visual-list">
+            <div>
+              <span>Brownie clásico</span>
+              <strong>6</strong>
+            </div>
+            <div>
+              <span>Gomitas enchiladas</span>
+              <strong>3</strong>
+            </div>
+            <div>
+              <span>Entrega</span>
+              <strong>Universidad</strong>
+            </div>
+          </div>
+          <div class="visual-message">
+            <span>Mensaje listo para WhatsApp</span>
+            <p>Hola, quiero confirmar mi pedido con entrega para hoy.</p>
+          </div>
         </div>
-        <div class="product-row">
-          <div><b>Galleta de chispas</b><small>$30 MXN</small></div>
-          <button data-name="Galleta de chispas" data-price="30">Agregar</button>
-        </div>
-        <div class="product-row">
-          <div><b>Brownie clásico</b><small>$35 MXN</small></div>
-          <button data-name="Brownie clásico" data-price="35">Agregar</button>
-        </div>
-
-        <div class="cart-box" id="cartPreview">Tu carrito está vacío.</div>
-        <button class="full-btn" id="sendDemoOrder" type="button">Generar pedido</button>
-      </aside>
+      </figure>
     </section>
 
-    <section id="servicios" class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Lo que podemos hacer</p>
-        <h2>Servicios pensados para vender, organizar y proteger.</h2>
-      </div>
-
-      <div class="service-grid">
-        <article class="service-card reveal">
-          <span class="icon">🌐</span>
-          <h3>Páginas web y landing pages</h3>
-          <p>Sitios rápidos para presentar tu negocio, servicios, precios, ubicación, redes y contacto.</p>
-        </article>
-        <article class="service-card reveal">
-          <span class="icon">🛒</span>
-          <h3>Catálogos con pedidos</h3>
-          <p>El cliente elige productos, cantidades y extras. El pedido llega listo por WhatsApp.</p>
-        </article>
-        <article class="service-card reveal">
-          <span class="icon">📅</span>
-          <h3>Sistemas de reservas</h3>
-          <p>Para uñas, barberías, clases, entregas, asesorías o servicios que necesitan agenda.</p>
-        </article>
-        <article class="service-card reveal">
-          <span class="icon">⚙️</span>
-          <h3>Automatización</h3>
-          <p>Formularios, cotizadores, Google Sheets, mensajes prearmados y flujos simples de trabajo.</p>
-        </article>
-        <article class="service-card reveal">
-          <span class="icon">💻</span>
-          <h3>Soporte IT</h3>
-          <p>Optimización de equipos, limpieza de Windows, instalación de programas y revisión de fallas.</p>
-        </article>
-        <article class="service-card reveal">
-          <span class="icon">🛡️</span>
-          <h3>Ciberseguridad básica</h3>
-          <p>Revisión de seguridad, buenas prácticas, contraseñas, 2FA, respaldos y análisis preventivo.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="demo" class="section split">
-      <div class="reveal">
-        <p class="eyebrow">Ejemplo real</p>
-        <h2>Así funcionaría una página para alguien que vende gomitas, galletas o brownies.</h2>
-        <p>El comprador no necesita descargar nada. Entra al link o escanea un QR, agrega productos y la página le genera un mensaje ordenado para enviar al WhatsApp del vendedor.</p>
-
-        <div class="flow">
-          <div><b>1</b><span>Elige productos</span></div>
-          <div><b>2</b><span>Calcula total</span></div>
-          <div><b>3</b><span>Envía WhatsApp</span></div>
-          <div><b>4</b><span>El vendedor confirma</span></div>
+    <section class="section" id="servicios">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Servicios</p>
+          <h2>Soluciones concretas, sin vueltas ni paquetes inflados.</h2>
+          <p>Diseñamos herramientas pequeñas, útiles y fáciles de mantener para negocios que necesitan vender, ordenar información y atender mejor.</p>
         </div>
-      </div>
 
-      <div class="message-panel reveal">
-        <p class="message-title">Mensaje generado automáticamente</p>
-        <div class="bubble" id="sampleMessage">
-          Hola, quiero hacer un pedido:<br>
-          • 2x Gomitas enchiladas - $90<br>
-          • 1x Galleta de chispas - $30<br><br>
-          Total: $120 MXN<br>
-          Entrega: En la universidad
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <span class="card-number">01</span>
+            <h3>Desarrollo Web</h3>
+            <ul>
+              <li>Landing pages</li>
+              <li>Catálogos digitales</li>
+              <li>Menús QR</li>
+              <li>Portafolios</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="card-number">02</span>
+            <h3>Aplicaciones Android</h3>
+            <ul>
+              <li>Flutter</li>
+              <li>Inventarios</li>
+              <li>Formularios</li>
+              <li>Reportes</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="card-number">03</span>
+            <h3>Sistemas de Reservas</h3>
+            <ul>
+              <li>Barberías</li>
+              <li>Uñas</li>
+              <li>Maquillaje</li>
+              <li>Consultorías</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="card-number">04</span>
+            <h3>Catálogos con pedidos por WhatsApp</h3>
+            <p>Productos, precios, extras y mensaje automático para que el cliente mande su pedido ordenado.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="card-number">05</span>
+            <h3>Soporte IT</h3>
+            <ul>
+              <li>Optimización Windows</li>
+              <li>Eliminación de malware</li>
+              <li>Instalación de software</li>
+              <li>Respaldo de información</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="card-number">06</span>
+            <h3>Ciberseguridad</h3>
+            <ul>
+              <li>Diagnóstico básico de seguridad</li>
+              <li>Protección de equipos</li>
+              <li>Configuración segura de Windows</li>
+              <li>Auditorías WiFi domésticas</li>
+              <li>Copias de seguridad</li>
+            </ul>
+          </article>
         </div>
-      </div>
-    </section>
-
-    <section id="ciberseguridad" class="section security-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Ciberseguridad para pequeños negocios</p>
-        <h2>Protección práctica, sin vender humo.</h2>
-        <p>Para emprendedores y estudiantes que manejan cuentas, correos, WhatsApp Business, pagos, redes sociales o equipos de trabajo.</p>
-      </div>
-
-      <div class="security-list reveal">
-        <div><span>01</span><p>Revisión básica de seguridad en laptop o PC.</p></div>
-        <div><span>02</span><p>Configuración de antivirus, firewall y actualizaciones.</p></div>
-        <div><span>03</span><p>Contraseñas seguras, gestor de contraseñas y doble factor.</p></div>
-        <div><span>04</span><p>Revisión de correos sospechosos, phishing y buenas prácticas.</p></div>
-        <div><span>05</span><p>Respaldos y recomendaciones para evitar pérdida de información.</p></div>
-      </div>
-    </section>
-
-    <section id="precios" class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Paquetes iniciales</p>
-        <h2>Precios claros para empezar rápido.</h2>
-      </div>
-
-      <div class="pricing-grid">
-        <article class="price-card reveal">
-          <h3>Presencia básica</h3>
-          <p class="price">Desde $500</p>
-          <p>Página sencilla, información del negocio, redes, ubicación y botón de WhatsApp.</p>
-        </article>
-        <article class="price-card featured reveal">
-          <span class="badge">Más vendible</span>
-          <h3>Catálogo Pro</h3>
-          <p class="price">Desde $900</p>
-          <p>Catálogo, carrito, total automático, QR y pedido directo por WhatsApp.</p>
-        </article>
-        <article class="price-card reveal">
-          <h3>Seguridad + soporte</h3>
-          <p class="price">Desde $350</p>
-          <p>Revisión de equipo, optimización, seguridad básica, contraseñas y recomendaciones.</p>
-        </article>
       </div>
     </section>
 
-    <section id="contacto" class="section contact-section">
-      <div class="reveal">
-        <p class="eyebrow">Empecemos simple</p>
-        <h2>Cuéntanos qué vendes o qué problema quieres resolver.</h2>
-        <p>Te diremos si conviene una página, un catálogo, una reserva, un formulario o una revisión técnica.</p>
+    <section class="section section-muted" id="emprendedores">
+      <div class="section-shell solutions-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Soluciones para Emprendedores</p>
+          <h2>Ejemplos reales para negocios que ya están vendiendo.</h2>
+          <p>La idea no es tener una página bonita solamente. La idea es quitar fricción: que el cliente vea, elija, pregunte, reserve o compre con menos pasos.</p>
+        </div>
+
+        <div class="solution-list">
+          <article class="solution-row reveal">
+            <span>Brownies y repostería</span>
+            <p>Catálogo por sabor, cajas especiales, fechas de entrega y pedido directo por WhatsApp.</p>
+          </article>
+          <article class="solution-row reveal">
+            <span>Gomitas y snacks</span>
+            <p>Menú digital con tamaños, combos, costos de envío y mensaje listo para confirmar.</p>
+          </article>
+          <article class="solution-row reveal">
+            <span>Barberías</span>
+            <p>Reservas por servicio, horarios disponibles, ubicación, redes y recordatorios manuales.</p>
+          </article>
+          <article class="solution-row reveal">
+            <span>Uñas y maquillaje</span>
+            <p>Portafolio de trabajos, paquetes, anticipo, agenda y contacto rápido para cotizaciones.</p>
+          </article>
+        </div>
       </div>
-      <a class="btn primary" href="https://wa.me/529991234567?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20Sky%20Solutions" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+    </section>
+
+    <section class="section" id="proceso">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Cómo trabajamos</p>
+          <h2>Un proceso claro para pasar de idea a herramienta funcionando.</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div>
+              <strong>Paso 1</strong>
+              <h3>El cliente solicita una cotización.</h3>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div>
+              <strong>Paso 2</strong>
+              <h3>Analizamos la necesidad.</h3>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div>
+              <strong>Paso 3</strong>
+              <h3>Desarrollamos la solución.</h3>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div>
+              <strong>Paso 4</strong>
+              <h3>Entregamos y damos soporte.</h3>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="cotizador">
+      <div class="section-shell quote-layout">
+        <div class="quote-copy reveal">
+          <p class="eyebrow">Cotizador interactivo</p>
+          <h2>Arma una estimación rápida.</h2>
+          <p>Selecciona lo que necesitas y calcula un precio aproximado en tiempo real. El costo final puede ajustarse según alcance, contenido y tiempos.</p>
+        </div>
+
+        <div class="quote-panel reveal" aria-label="Cotizador de servicios">
+          <div class="quote-options">
+            <label class="quote-option">
+              <input type="checkbox" value="Página web" data-price="2500" />
+              <span>Página web</span>
+              <strong>$2,500</strong>
+            </label>
+            <label class="quote-option">
+              <input type="checkbox" value="Catálogo digital" data-price="1800" />
+              <span>Catálogo digital</span>
+              <strong>$1,800</strong>
+            </label>
+            <label class="quote-option">
+              <input type="checkbox" value="Sistema de reservas" data-price="2200" />
+              <span>Sistema de reservas</span>
+              <strong>$2,200</strong>
+            </label>
+            <label class="quote-option">
+              <input type="checkbox" value="WhatsApp automático" data-price="900" />
+              <span>WhatsApp automático</span>
+              <strong>$900</strong>
+            </label>
+            <label class="quote-option">
+              <input type="checkbox" value="Aplicación Android" data-price="6500" />
+              <span>Aplicación Android</span>
+              <strong>$6,500</strong>
+            </label>
+            <label class="quote-option">
+              <input type="checkbox" value="Soporte IT" data-price="500" />
+              <span>Soporte IT</span>
+              <strong>$500</strong>
+            </label>
+            <label class="quote-option">
+              <input type="checkbox" value="Ciberseguridad" data-price="850" />
+              <span>Ciberseguridad</span>
+              <strong>$850</strong>
+            </label>
+          </div>
+
+          <aside class="quote-summary">
+            <span>Total aproximado</span>
+            <strong id="quoteTotal">$0 MXN</strong>
+            <p id="quoteDetails">Selecciona uno o más servicios para calcular tu estimación.</p>
+            <a class="button button-primary" id="quoteWhatsapp" href="https://wa.me/529984954434?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20Sky%20Solutions" target="_blank" rel="noopener">Enviar selección</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="portafolio">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Portafolio</p>
+          <h2>Proyectos muestra con enfoque práctico.</h2>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card reveal">
+            <span>Flutter</span>
+            <h3>SkyFinance</h3>
+            <p>Aplicación de finanzas personales en Flutter.</p>
+          </article>
+          <article class="portfolio-card reveal">
+            <span>Redes locales</span>
+            <h3>SkyGuardian</h3>
+            <p>Herramienta para análisis de redes locales.</p>
+          </article>
+          <article class="portfolio-card reveal">
+            <span>Comunidad</span>
+            <h3>Alerta Vecinal</h3>
+            <p>Aplicación comunitaria para reportes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section section-shell" aria-label="Estadísticas de Sky Solutions">
+      <div class="stat-item reveal">
+        <strong class="stat-number" data-prefix="+" data-target="3">0</strong>
+        <span>proyectos desarrollados</span>
+      </div>
+      <div class="stat-item reveal">
+        <strong class="stat-number" data-prefix="+" data-target="5">0</strong>
+        <span>tecnologías utilizadas</span>
+      </div>
+      <div class="stat-item reveal">
+        <strong class="stat-number" data-target="100" data-suffix="%">0</strong>
+        <span>atención personalizada</span>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <span>© 2026 Sky Solutions</span>
-    <span>Web · Automatización · Soporte IT · Ciberseguridad</span>
+  <footer class="site-footer" id="contacto">
+    <div>
+      <strong>Sky Solutions</strong>
+      <p>Tecnología simple, útil y lista para crecer con tu negocio.</p>
+    </div>
+    <nav aria-label="Enlaces de contacto">
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://wa.me/529991234567?text=Hola%2C%20quiero%20hablar%20con%20Sky%20Solutions" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:contacto@skysolutions.dev">Correo electrónico</a>
+    </nav>
   </footer>
 
   <script src="script.js"></script>
