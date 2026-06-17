@@ -1,26 +1,61 @@
-const totalElement = document.getElementById('total');
-const quoteWhatsapp = document.getElementById('quoteWhatsapp');
-const checkboxes = document.querySelectorAll('#cotizador input[type="checkbox"]');
+const root = document.documentElement;
+const themeToggle = document.getElementById('themeToggle');
+const themeText = document.getElementById('themeText');
+const savedTheme = localStorage.getItem('sky-theme');
+
+if (savedTheme) {
+  root.setAttribute('data-theme', savedTheme);
+  themeText.textContent = savedTheme === 'light' ? 'Claro' : 'Oscuro';
+}
+
+themeToggle?.addEventListener('click', () => {
+  const current = root.getAttribute('data-theme') || 'dark';
+  const next = current === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('sky-theme', next);
+  themeText.textContent = next === 'light' ? 'Claro' : 'Oscuro';
+});
+
+const cart = [];
+const cartPreview = document.getElementById('cartPreview');
+const sampleMessage = document.getElementById('sampleMessage');
 const phone = '529991234567';
 
-function updateTotal() {
-  let total = 0;
-  const selected = [];
-  checkboxes.forEach((box) => {
-    if (box.checked) {
-      total += Number(box.value);
-      selected.push(box.parentElement.textContent.trim());
-    }
+function renderCart() {
+  if (!cart.length) {
+    cartPreview.textContent = 'Tu carrito está vacío.';
+    return;
+  }
+
+  const grouped = cart.reduce((acc, item) => {
+    acc[item.name] = acc[item.name] || { ...item, qty: 0 };
+    acc[item.name].qty += 1;
+    return acc;
+  }, {});
+
+  const items = Object.values(grouped);
+  const total = items.reduce((sum, item) => sum + item.price * item.qty, 0);
+  cartPreview.innerHTML = items.map(item => `${item.qty}x ${item.name} — $${item.price * item.qty}`).join('<br>') + `<br><b>Total: $${total} MXN</b>`;
+
+  sampleMessage.innerHTML = `Hola, quiero hacer un pedido:<br>${items.map(item => `• ${item.qty}x ${item.name} - $${item.price * item.qty}`).join('<br>')}<br><br>Total: $${total} MXN<br>Entrega: En la universidad`;
+}
+
+document.querySelectorAll('[data-name][data-price]').forEach(button => {
+  button.addEventListener('click', () => {
+    cart.push({ name: button.dataset.name, price: Number(button.dataset.price) });
+    renderCart();
   });
-  totalElement.textContent = `$${total.toLocaleString('es-MX')} MXN`;
-  const message = `Hola, quiero cotizar con Sky Solutions. Me interesa: ${selected.join(', ') || 'una solución digital'}. Estimado: $${total.toLocaleString('es-MX')} MXN`;
-  quoteWhatsapp.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-}
+});
 
-checkboxes.forEach((box) => box.addEventListener('change', updateTotal));
-updateTotal();
+document.getElementById('sendDemoOrder')?.addEventListener('click', () => {
+  const message = sampleMessage.innerText.replaceAll('\n', '%0A');
+  window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+});
 
-function demoMessage() {
-  const output = document.getElementById('demo-output');
-  output.textContent = 'Hola, quiero pedir 1 Brownie clásico ($35) y 1 Gomitas enchiladas ($50). Total: $85 MXN.';
-}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.14 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
