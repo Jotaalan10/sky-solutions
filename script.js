@@ -5,7 +5,7 @@ const quoteOptions = document.querySelectorAll(".quote-option input");
 const quoteTotal = document.getElementById("quoteTotal");
 const quoteDetails = document.getElementById("quoteDetails");
 const quoteWhatsapp = document.getElementById("quoteWhatsapp");
-const phoneNumber = "529991234567";
+const phoneNumber = "529984954434";
 const currency = new Intl.NumberFormat("es-MX", {
   style: "currency",
   currency: "MXN",
